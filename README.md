@@ -1,7 +1,6 @@
-# SSUE Overlord Console
+# Overlord RTC Web App
 
-a demo of next generation real-time communication channels in SSUE. Goal is to illustrate the power of the modern web browser in conjunction with low-latency media streams.
-Lets make it a fun and interesting demo along the way. 
+a demo of next generation real-time communication channels. Goal is to illustrate the power of the modern web browser in conjunction with low-latency media streams.
 
 Contact me if you have further questions. Matt, February 2015
 

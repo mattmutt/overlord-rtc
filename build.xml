@@ -1,6 +1,6 @@
 <project name="overlord" default="dist" basedir=".">
     <description>
-        SSUE Overlord demo
+        Overlord RTC demo
     </description>
     <!-- set global properties for this build -->
     <property name="src" location="src"/>
