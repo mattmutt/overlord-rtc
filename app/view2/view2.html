@@ -1,0 +1,49 @@
+<article id="view2">
+
+    <section class="profile">
+        <div class="profileContainer">
+
+            <div class="profilePhoto">
+                <img ng-src="{{ profile.profileImageURL }}" title="{{ profile.userId }}"/>
+            </div>
+
+            <div class="profileDetails">
+                <div class="profileName" ng-bind-html="profileName"></div>
+
+                <div>{{ profile.title }}</div>
+                <div>Fiscal Year Revenue: {{ profile.metadata.operations.fiscalYearRevenue}}
+                    ({{ profile.metadata.operations.fiscalYearRevenueCurrency}})
+                </div>
+            </div>
+
+            <div class="profileActions">
+                <div id="toggleRecording" ng-click="onToggleRecordingEvent()" ng-class="{ active : isRecordingFlag }"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="typed-input">
+        <form>
+            <input id="typedInput" type="text" ng-focus="isTypedEntryFocused=true" ng-blur="isTypedEntryFocused=false"
+                   ng-enter="onTypedEntrySubmitEvent()" ng-trim="true"/>
+        </form>
+    </section>
+
+    <!-- work from speech engine injected -->
+    <section class="channels">
+
+        <div class="channel-container">
+            <div id="my-channel"></div>
+        </div>
+        <div class="channel-container">
+            <div id="group-channel"></div>
+        </div>
+
+    </section>
+
+    <section class="debug">
+        <div id="debug-channel"></div>
+    </section>
+
+</article>

@@ -1,0 +1,15 @@
+{
+  "userId": "jsmith",
+  "name": "Jenni Smith",
+  "title": "VP Marketing - Northwest",
+  "metadata": {
+    "operations": {
+      "staffCount": "132",
+      "fiscalYearRevenue": "2000",
+      "fiscalYearRevenueCurrency": "USD",
+      "projectedForecastChange": "-13"
+    }
+  },
+  "profileImageURL": "assets/images/profiles/jsmith.jpg",
+  "language": "en-US"
+}

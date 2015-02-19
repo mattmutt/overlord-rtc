@@ -1,0 +1,15 @@
+{
+  "userId": "dthomas",
+  "name": "Dominique G. Thomas",
+  "title": "General Ops - SouthEast Region",
+  "metadata": {
+    "operations": {
+      "staffCount": "8",
+      "fiscalYearRevenue": "20000",
+      "fiscalYearRevenueCurrency": "USD",
+      "projectedForecastChange": "55"
+    }
+  },
+  "profileImageURL": "assets/images/profiles/dthomas.jpg",
+  "language": "en-US"
+}

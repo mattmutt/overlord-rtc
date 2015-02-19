@@ -1,0 +1,94 @@
+<project name="overlord" default="dist" basedir=".">
+    <description>
+        SSUE Overlord demo
+    </description>
+    <!-- set global properties for this build -->
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="library" location="lib"/>
+    <property name="resource" location="resource"/>
+    <property name="app" location="app"/>
+    <property name="app-vendor" location="app/vendor_components"/>
+    <property name="dist" location="dist"/>
+
+    <target name="init">
+
+
+        <!-- dependencies -->
+        <git command="clone">
+            <args>
+                <arg value="git://github.com/muaz-khan/WebRTC-Experiment.git"/>
+                <arg value="${library}/WebRTC-Experiment"/>
+            </args>
+        </git>
+        <!-- install what i want -->
+        <!--
+        <copy todir="${app-vendor}/WebRTC-Experiment/Translator.js">
+            <fileset dir="${library}/WebRTC-Experiment/Translator.js"/>
+        </copy>
+        -->
+
+        <!--
+        <copy todir="${app-vendor}">
+            <fileset dir="${library}/WebRTC-Experiment"/>
+        </copy>
+        -->
+
+
+        <!-- wijmo 5 bundle -->
+        <unzip src="${resource}/C1Wijmo-Eval_5.20143.32.zip" dest="${library}/wijmo-5"/>
+        <copy todir="${app-vendor}/wijmo-5/">
+            <fileset dir="${library}/wijmo-5/Dist/"/>
+        </copy>
+
+
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build}"/>
+    </target>
+
+    <target name="compile" depends="init">
+    </target>
+
+    <target name="dist" depends="compile" description="generate the distribution">
+
+    </target>
+
+    <target name="clean" description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+        <delete dir="${library}"/>
+    </target>
+
+
+    <!-- macros -->
+
+    <macrodef name="git">
+        <attribute name="command"/>
+        <attribute name="dir" default=""/>
+        <element name="args" optional="true"/>
+        <sequential>
+            <echo message="git @{command}"/>
+            <exec executable="git" dir="@{dir}">
+                <arg value="@{command}"/>
+                <args/>
+            </exec>
+        </sequential>
+    </macrodef>
+    <macrodef name="git-clone-pull">
+        <attribute name="repository"/>
+        <attribute name="dest"/>
+        <sequential>
+            <git command="clone">
+                <args>
+                    <arg value="@{repository}"/>
+                    <arg value="@{dest}"/>
+                </args>
+            </git>
+            <git command="pull" dir="@{dest}"/>
+        </sequential>
+    </macrodef>
+
+
+</project>

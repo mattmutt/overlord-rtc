@@ -1,0 +1,15 @@
+{
+  "userId": "jlebowski",
+  "name": "Jeff Lebowski",
+  "title": "Alley General Manager / SoCal",
+  "metadata": {
+    "operations": {
+      "staffCount": "3",
+      "fiscalYearRevenue": "600000",
+      "fiscalYearRevenueCurrency": "USD",
+      "projectedForecastChange": "15"
+    }
+  },
+  "profileImageURL": "assets/images/profiles/jlebowski.jpg",
+  "language": "en-US"
+}

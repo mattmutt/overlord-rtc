@@ -1,0 +1,15 @@
+{
+  "userId": "psanchez",
+  "name": "Pablo Emilio Sanchez",
+  "title": "Sales - Latinoamerica",
+  "metadata": {
+    "operations": {
+      "staffCount": "232",
+      "fiscalYearRevenue": "2000000",
+      "fiscalYearRevenueCurrency": "MXN",
+      "projectedForecastChange": "23"
+    }
+  },
+  "profileImageURL": "assets/images/profiles/psanchez.jpg",
+  "language": "es-MX"
+}
